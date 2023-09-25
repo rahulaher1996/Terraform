@@ -1,2 +1,1 @@
-# Terraform
-Sample terraform codes
+This repository contains the code for Terraform
