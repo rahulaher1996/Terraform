@@ -1,12 +1,20 @@
 # Create a new VPC if it doesn't exist, or use an existing one
-resource "aws_vpc" "example" {
+resource "aws_vpc" "demo" {
   cidr_block = "10.0.0.0/16"
+
+  tags = {
+    Name = "demo-vpc"
+  }
 }
 
 # Create a new security group
 resource "aws_security_group" "example" {
   name        = "example"
   description = "Example Security Group"
+
+  tags = {
+    Name = "demo-sg"
+  }
 
   // Define your security group rules here
   // For example, allow SSH and HTTP traffic
@@ -31,5 +39,5 @@ resource "aws_security_group" "example" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  vpc_id = aws_vpc.example.id
+  vpc_id = aws_vpc.demo.id
 }
