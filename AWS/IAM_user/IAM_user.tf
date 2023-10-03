@@ -1,3 +1,9 @@
+# Define the AWS provider configuration
+provider "aws" {
+  region = "us-east-1"
+}
+
+
 resource "aws_iam_user" "test_user" {
   name = "test-user"
 }
