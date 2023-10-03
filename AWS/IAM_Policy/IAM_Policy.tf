@@ -1,3 +1,9 @@
+# Define the AWS provider configuration
+provider "aws" {
+  region = "us-east-1"
+}
+
+
 resource "aws_iam_policy" "ec2_full_access" {
   name        = "ec2-full-access-policy"
   description = "Policy for EC2 full access"
