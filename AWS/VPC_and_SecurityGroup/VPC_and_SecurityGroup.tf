@@ -1,3 +1,10 @@
+# Define the AWS provider configuration
+provider "aws" {
+  region = "us-east-1"
+}
+
+
+
 # Create a new VPC if it doesn't exist, or use an existing one
 resource "aws_vpc" "demo" {
   cidr_block = "10.0.0.0/16"
